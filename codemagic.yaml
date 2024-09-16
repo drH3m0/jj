@@ -5,10 +5,11 @@ workflows:
   flutter_build:
     name: Build Flutter APK
     max_build_duration: 60 # الوقت الأقصى للبناء بالدقائق
-    instance_type: mac_m1 # نوع المثيل (يمكن أن يكون mac_m1 أو mac_m2)
+    instance_type: mac_mini_m1 # نوع المثيل (تحديث إلى نوع صحيح من قائمة الأذونات)
     triggers:
-      - schedule:
-          cron: "0 2 * * *" # مثال على جدولة للبناء كل يوم في الساعة 2:00 صباحاً بتوقيت GMT
+      - push:
+          branches:
+            - main # أو الفرع الذي تريد تشغيل البناء عليه
     environment:
       vars:
         # متغيرات البيئة، مثل إعدادات التكوين
