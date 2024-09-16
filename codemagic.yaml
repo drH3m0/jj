@@ -1,11 +1,10 @@
 version: 2.0
 
-# تعيين اسم التطبيق الذي سيتم عرضه في لوحة التحكم Codemagic
 workflows:
   flutter_build:
     name: Build Flutter APK
     max_build_duration: 60 # الوقت الأقصى للبناء بالدقائق
-    instance_type: mac_mini_m1 # نوع المثيل (تحديث إلى نوع صحيح من قائمة الأذونات)
+    instance_type: mac_mini_m1 # نوع المثيل، اختر النوع المناسب للمشروع
     triggers:
       - push:
           branches:
