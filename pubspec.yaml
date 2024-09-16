@@ -1,0 +1,14 @@
+name: attendance_app
+description: A Flutter application for student attendance using QR codes
+
+dependencies:
+  flutter:
+    sdk: flutter
+  qr_flutter: ^4.0.0
+  qr_code_scanner: ^1.0.0
+  sqflite: ^2.0.0+4
+  path: ^1.8.0
+  path_provider: ^2.0.0
+
+flutter:
+  uses-material-design: true
